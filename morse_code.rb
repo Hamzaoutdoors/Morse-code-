@@ -1,35 +1,46 @@
 $hsh = {".-" => "A", "-..." => "B", "-.-." => "C", "-.." => "D",
-"." => "e", "..-." => "f", "--." => "g", "...." => "h",
-".." => "i", ".---" => "j", "-.-" => "k", ".-.." => "l",
-"--" => "m", "-." => "n", "---" => "o", ".--." => "p",
-"--.-" => "q", ".-." => "r", "..." => "s", "-" => "t",
-"..-" => "u", "...-" => "v", ".--" => "w", "-..-" => "x",
-"-.--" => "y", "--.." => "z"}
+"." => "E", "..-." => "F", "--." => "G", "...." => "H",
+".." => "I", ".---" => "J", "-.-" => "K", ".-.." => "L",
+"--" => "M", "-." => "N", "---" => "O", ".--." => "P",
+"--.-" => "Q", ".-." => "R", "..." => "S", "-" => "T",
+"..-" => "U", "...-" => "v", ".--" => "W", "-..-" => "X",
+"-.--" => "Y", "--.." => "Z"}
 
 def decode_char(char)
    $hsh.each do |key, value|
-   print value if key == char
+   return value if key == char
  end
 end
 
-decode_char(".-")
-
-def decode_word(char)
-
+def decode_word(word)
+    new_char = ''
+    full_word = ''
+    word_split = word.split(" ")
+    word_split.each do |letter|
+        if letter == "/"
+           " "
+        else
+        new_char = decode_char(letter.to_s)
+        full_word += new_char
+   end
+end
+    return full_word
 end
 
-def decode(char)
+print decode_word(".... .- -- --.. .-"), "\n"
 
+def decode(msg)
+    new_word = ''
+    full_message = ''
+  msg_split = msg.split("   ")
+  msg_split.each do |word|             
+      new_word = decode_word(word)
+      full_message += new_word + " "
+    end
+    return full_message
 end
 
-# def decode_morse(morse_code)
-#   morse_code
-#     .split('   ')
-#     .select do |char|
-#       char != ''
-#     end
-#     .map do |word|
-#       word.split(' ').map { |char| MORSE_CODE[char] }.join
-#     end
-#     .join(' ')
-# end
+print decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...")
+
+
+
