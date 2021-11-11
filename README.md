@@ -1,3 +1,12 @@
+  <a href="https://www.microverse.org/">
+    <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
+  </a>
+  
+   </br>
+ <div align="center">
+  <em align="center" style>" Everyday life is like programming, I guess. If you love something you can put beauty into it."</em><strong> - Leonardo da Vinci </strong>
+  </div>
+ 
 # Morse-code
 
 
