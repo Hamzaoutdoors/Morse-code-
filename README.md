@@ -4,7 +4,7 @@
   
    </br>
  <div align="center">
-  <em align="center" style>" Everyday life is like programming, I guess. If you love something you can put beauty into it."</em><strong> - Leonardo da Vinci </strong>
+  <em align="center" style>" Simplicity is the ultimate sophistication."</em><strong> - Leonardo da Vinci </strong>
   </div>
  
 # Morse-code
